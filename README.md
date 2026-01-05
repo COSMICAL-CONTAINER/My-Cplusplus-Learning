@@ -1,2 +1,2 @@
-# My-Cplusplus-learning
-This is my Cplusplus learning project
+# My-Cplusplus-Learning
+This is my cplusplus learning project

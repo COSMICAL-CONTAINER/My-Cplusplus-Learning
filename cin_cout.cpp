@@ -9,22 +9,37 @@ int main()
     // cin and cout example
     int num;
     cout << "Please enter a number: ";
-    cin >> num;
-    cout << "You entered: " << num << endl;
-    cin.clear(); // clear the input buffer
+    if (!(cin >> num))
+    {
+        // handle invalid input
+        cerr << "Invalid number\n";
+        cin.clear();
+        string _discard;
+        // throw away the invalid input
+        getline(cin, _discard);
+    }
+    else
+    {
+        cout << "You entered: " << num << endl;
+        // clear the newline left in the input buffer
+        string _discard;
+        getline(cin, _discard);
+    }
 
     // getline vs operator>>
     string name;
     cout << "Please enter your name: ";
-    // enter "zhang san" will read completely
+    // getline 读取整行（可以包含空格），不会只读到第一个空格前
     getline(cin, name);
     cout << "Hello, " << name << "!" << endl;
+
     cout << "Please enter your name: ";
-    // enter "zhang san" will read only "zhang"
+    // operator>> 读取一个单词（遇到空白停止）
     cin >> name;
     cout << "Hello, " << name << "!" << endl;
-    // clear the input buffer
-    cin.clear();
+    // 如果后面还要用 getline，记得丢弃剩余换行
+    string _discard2;
+    getline(cin, _discard2);
 
     // string stream line;
     string line1 = "Hello World";
@@ -50,6 +65,8 @@ int main()
     cout << "Fixed float: " << f << endl;
     cout << scientific;
     cout << "Scientific float: " << f << endl;
+    cout << defaultfloat;
+    cout << "Default float again: " << f << endl;
 
     // create and write to a file using ofstream
     string inputFile = "my.txt";

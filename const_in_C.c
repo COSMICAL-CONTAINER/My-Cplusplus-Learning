@@ -10,6 +10,7 @@ const int *const_int_ptr = &const_int;
 
 int main()
 {
+    
     // If GLOBAL is not defined, const_int and const_int_ptr are local variables
     #ifndef GLOBAL
         const int const_int = 0;

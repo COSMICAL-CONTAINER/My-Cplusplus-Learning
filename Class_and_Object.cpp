@@ -37,6 +37,8 @@ struct struct_Complex
 
 // struct all things are public by default
 // class all things are private by default
+// 结构体的所有成员默认都是public的
+// 类的所有成员默认都是private的
 class class_Complex
 {
     public:
@@ -46,6 +48,7 @@ class class_Complex
     }
 
     // because add function will change the current object, so no const for it
+    // 因为add函数会改变当前对象，所以不需要const
     class_Complex &add(const class_Complex &b);
 
 
@@ -55,6 +58,8 @@ class class_Complex
 
 // :: is the scope resolution operator
 // define the add function outside the class
+// ::是作用域解析运算符
+// 在类外部定义add函数
 class_Complex & class_Complex::add(const class_Complex &b)
 {
     real += b.real;

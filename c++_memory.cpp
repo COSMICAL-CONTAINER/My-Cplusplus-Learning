@@ -207,10 +207,29 @@ void smartPointerDemo()
         cout << "weak_ptr reference count: " << weakPtr.use_count() << endl;
         // cout << "weak_ptr引用计数: " << weakPtr.use_count() << endl;
 
-        if (auto sharedPtr = weakPtr.lock())
+        // shared_ptr is the owner (like a dog owner holding the leash)
+        // weak_ptr is a passerby (observer)
+        // .lock() tries to hold the leash
+        // shared_ptr 是持有者（比如牵着狗的主人）
+        // weakPtr 是一个路人（观察者）
+        // .lock() 是尝试去牵绳子
+        if (auto sharedPtr = weakPtr.lock()) 
         {
-            cout << "weak_ptr can be converted to shared_ptr" << endl;
-            // cout << "weak_ptr可以转换为shared_ptr" << endl;
+            // when entering here, .lock() succeeded! Returned a valid sharedPtr. The object is still alive!
+            // now sharedPtr is also one of the new owners, the object will definitely not be destroyed here.
+            // 进入这里，说明 .lock() 成功了！返回了一个有效的 sharedPtr。说明对象还活着！
+            // 此时 sharedPtr 也是新的持有者之一，对象绝对不会在这里被销毁。
+            cout << "obj is still alive, I can safely use it" << endl;
+            cout << "对象还活着，我可以安全地使用它" << endl;
+        }
+        else
+        {
+            // when entering here, .lock() returned nullptr.
+            // indicates the object has been destructed (dead).
+            // 进入这里，说明 .lock() 返回了 nullptr。
+            // 说明对象已经析构了（死透了）。
+            cout << "obj is gone, do not access it" << endl;
+            cout << "对象已经没了，别访问了" << endl;
         }
     }
 }
@@ -255,6 +274,50 @@ void memoryLeakDemo()
     // both objects will not be destroyed due to circular reference
     // 两个对象都不会被销毁，因为引用计数永远不会为0
 }
+// RAII(Resource Acquisition Is Initialization)(资源获取即初始化)
+// RAII is said to bind the lifecycle of resources to the lifecycle of an object
+// create (constructor): when you create an object, acquire resources in the constructor (e.g., allocate memory with new, open files, lock).
+// destroy (destructor): when the object is destroyed, release resources in the destructor (e.g., free memory with delete, close files, unlock).
+// RAII说白了就是把资源的生命周期，绑定到一个对象的生命周期上
+// 生（构造函数）：当你创建一个对象时，在构造函数里获取资源（比如申请内存 new、打开文件、加锁）。
+// 死（析构函数）：当对象销毁时，在析构函数里释放资源（比如释放内存 delete、关闭文件、解锁）。
+class RAIIExample {
+private:
+    int* data;
+    
+public:
+    RAIIExample() : data(nullptr) {
+        data = new int[10];
+        cout << "RAII: 资源获取" << endl;
+    }
+    
+    ~RAIIExample() {
+        if (data) {
+            delete[] data;
+            cout << "RAII: 资源释放" << endl;
+        }
+    }
+    
+    // 禁用拷贝
+    RAIIExample(const RAIIExample&) = delete;
+    RAIIExample& operator=(const RAIIExample&) = delete;
+    
+    // 允许移动
+    RAIIExample(RAIIExample&& other) noexcept : data(other.data) {
+        other.data = nullptr;
+        cout << "RAII: 移动构造" << endl;
+    }
+    
+    RAIIExample& operator=(RAIIExample&& other) noexcept {
+        if (this != &other) {
+            delete[] data;
+            data = other.data;
+            other.data = nullptr;
+            cout << "RAII: 移动赋值" << endl;
+        }
+        return *this;
+    }
+};
 
 int main()
 {

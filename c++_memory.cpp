@@ -279,7 +279,7 @@ void sizeofDemoFunc(char Funcstr[100])
 {
     // sizeof(Funcstr) = 8: the function parameter is a character array name, i.e., the address of the first element of the array, size is the size of the pointer
     // sizeof(Funcstr) = 8: 函数的参数为字符数组名，即数组首元素的地址，大小为指针的大小
-    cout << "sizeof(Funcstr): "<< sizeof(Funcstr) << endl;
+    cout << "sizeof(Funcstr): " << sizeof(Funcstr) << endl;
 }
 
 void sizeofDemo()
@@ -322,7 +322,7 @@ void sizeofDemo()
     // sizeof(p) = 8: p is a pointer pointing to the memory allocated by malloc of size 100 bytes, sizeof(p) is the size of the pointer, not the size of the memory it points to
     // sizeof(p) = 8: p 指向malloc分配的大小为100 byte的内存的起始地址，sizeof(p)为指针的大小，而不是它指向内存的大小
     void *p2 = malloc(100);
-    cout << "sizeof(p2): "<< sizeof(p2) << endl;
+    cout << "sizeof(p2): " << sizeof(p2) << endl;
 }
 
 // RAII(Resource Acquisition Is Initialization)(资源获取即初始化)

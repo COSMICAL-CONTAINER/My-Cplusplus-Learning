@@ -49,6 +49,9 @@ class Complex
     bool operator==(const Complex &complexObj);
     bool operator!=(const Complex &complexObj);
 
+    Complex& operator++();
+    Complex operator++(int);
+
     // overload [] operators
     // 重载[]
     // private:string title; 
@@ -220,6 +223,39 @@ bool Complex::operator!=(const Complex &complexObj)
     {
         return true;
     }
+}
+
+// 1. why return object instead of reference?
+// Because the post increment creates a temporary object that will be destroyed when the function ends
+// If you return a reference, the temporary object will be destroyed after the function ends, and the reference will point to invalid memory
+// 2. Why const before the post increment?
+// Prevents calling the post increment operator twice in a row (such as i++++)
+// Consistent with built-in type behavior
+// The first return is the old value, not the original object, and calling two post increments results in only one increment
+// 3. Performance considerations:
+// When dealing with user-defined types, it is better to use the pre-increment operator
+// Because it does not create a temporary object, thus avoiding the additional overhead caused by construction and destruction
+// 1. 为什么后置返回对象，而不是引用？
+// 因为后置为了返回旧值创建了一个临时对象，在函数结束的时候这个对象就会被销毁
+// 如果返回引用，那么临时对象被销毁后，引用就指向了无效的内存
+// 2. 为什么后置前面要加const？
+// 防止连续两次调用后置++重载符（如i++++）
+// 与内置类型行为保持一致
+// 第一次返回的是旧值，而不是原对象，调用两次后置++，结果只累加了一次
+// 3. 性能考虑：
+// 处理用户的自定义类型时，最好使用前置++
+// 因为它不会创建临时对象，进而不会带来构造和析构而造成的格外开销
+Complex &Complex::operator++()
+{
+    real++;
+    return (*this);
+}
+
+Complex Complex::operator++(int)
+{
+    Complex temp = *this;
+    real++;
+    return temp;
 }
 
 // If the return value is void, you cannot write cout << a << b;

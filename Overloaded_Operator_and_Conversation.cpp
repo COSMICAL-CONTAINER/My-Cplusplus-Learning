@@ -113,8 +113,6 @@ class Complex
     // 如果这样写到时候调用就是Complex a;  a << std::cout;
     // 所以一般不写成成员函数
     friend ostream& operator>>(ostream &in, const Complex &complexIn);
-    Complex& operator++();
-    Complex operator++(int);
 
     private:
     double real;
@@ -277,26 +275,6 @@ ostream& operator>>(ostream &in, const Complex &complexIn)
     in >> complexIn.ima;
     return in;
 }
-
-// ++num
-// The ampersand (&) here can be omitted
-// 这里的&可以不加
-Complex& Complex::operator++()
-{
-    real++;
-    ima++;
-    return (*this);
-}
-
-// num++
-Complex Complex::operator++(int)
-{
-    Complex temp = *this;
-    real++;
-    ima++;
-    return temp;
-}
-
 
 int main()
 {

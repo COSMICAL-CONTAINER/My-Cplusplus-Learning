@@ -2,6 +2,9 @@
 #include <vector>
 using namespace std;
 
+// vector is a dynamic array that can resize itself automatically when elements are added or removed.
+// vector 是一个动态数组，当元素被添加或删除时，它能够自动调整大小。
+
 int main()
 {
     cout << "=== Vector Demo ===" << endl;

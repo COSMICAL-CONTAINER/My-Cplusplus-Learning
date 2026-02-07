@@ -89,4 +89,6 @@ int main()
     for (const auto &elem : vec1)
         cout << elem << " ";
     cout << endl;
+
+    return 0;
 }

@@ -3,54 +3,54 @@
 using namespace std;
 
 // vector is a dynamic array that can resize itself automatically when elements are added or removed.
-// vector ÊÇÒ»¸ö¶¯Ì¬Êı×é£¬µ±ÔªËØ±»Ìí¼Ó»òÉ¾³ıÊ±£¬ËüÄÜ¹»×Ô¶¯µ÷Õû´óĞ¡¡£
+// vector æ˜¯ä¸€ä¸ªåŠ¨æ€æ•°ç»„ï¼Œå½“å…ƒç´ è¢«æ·»åŠ æˆ–åˆ é™¤æ—¶ï¼Œå®ƒèƒ½å¤Ÿè‡ªåŠ¨è°ƒæ•´å¤§å°ã€‚
 
 int main()
 {
     cout << "=== Vector Demo ===" << endl;
-    cout << "=== Vector ÏêÏ¸Ê¾Àı ===" << endl;
+    cout << "=== Vector è¯¦ç»†ç¤ºä¾‹ ===" << endl;
 // 1. create and initialize
-// 1. ´´½¨ºÍ³õÊ¼»¯
+// 1. åˆ›å»ºå’Œåˆå§‹åŒ–
     vector<int> vec1 = {1, 2, 3, 4, 5};
 
     // five elements with value 10
-    // 5¸ö10
+    // 5ä¸ª10
     vector<int> vec2(5, 10);
 
     // use vec1's elements to initialize
-    // ÓÃvec1³õÊ¼»¯
+    // ç”¨vec1åˆå§‹åŒ–
     vector<int> vec3(vec1.begin(), vec1.end());
 
     // void vector;
-    // ¿Õvector
+    // ç©ºvector
     vector<int> vec4;
 
 // 2. capacity and size
-// 2. ÈİÁ¿¹ÜÀí
+// 2. å®¹é‡ç®¡ç†
     cout << "vec1.size(): " << vec1.size() << ", vec1.capacity(): " << vec1.capacity() << endl;
     // preallocate space, reduce memory allocation times
-    // Ô¤·ÖÅä¿Õ¼ä, ¼õÉÙÄÚ´æ·ÖÅä´ÎÊı
+    // é¢„åˆ†é…ç©ºé—´, å‡å°‘å†…å­˜åˆ†é…æ¬¡æ•°
     vec1.reserve(20);
 
     cout << "after reserve capacity: " << vec1.capacity() << endl;
 
 // 3. element access
-// 3. ÔªËØ·ÃÎÊ
+// 3. å…ƒç´ è®¿é—®
     // use index or at(), use front() and back() to get the first and last element
     // when use at(), it will do boundary check
-    // ÓÃÏÂ±ê»òat()·ÃÎÊ, ÓÃfront()ºÍback()»ñÈ¡µÚÒ»¸öºÍ×îºóÒ»¸öÔªËØ
-    // ÆäÖĞÓÃat()·ÃÎÊ»á×öÔ½½ç¼ì²é
+    // ç”¨ä¸‹æ ‡æˆ–at()è®¿é—®, ç”¨front()å’Œback()è·å–ç¬¬ä¸€ä¸ªå’Œæœ€åä¸€ä¸ªå…ƒç´ 
+    // å…¶ä¸­ç”¨at()è®¿é—®ä¼šåšè¶Šç•Œæ£€æŸ¥
     cout << "the first element: "<< vec1.front() << endl;
     cout << "the last element: " << vec1.back() << endl;
     cout << "the 3rd element: " << vec1[2] << endl;
     cout << "the 3rd element(safe): " << vec1.at(2) << endl;
 
 // 4. insert operation
-// 4. ²åÈë²Ù×÷
+// 4. æ’å…¥æ“ä½œ
     vec1.push_back(6);
     vec1.insert(vec1.begin() + 2, 100);
     // insert 3 elements at the beginning
-    // ÔÚ¿ªÍ·²åÈë3¸ö0
+    // åœ¨å¼€å¤´æ’å…¥3ä¸ª0
     vec1.insert(vec1.begin(), 3, 0);
 
     cout << "after insert: ";
@@ -59,11 +59,11 @@ int main()
     cout << endl;
 
 // 5. delete operation
-// 5. É¾³ı²Ù×÷
+// 5. åˆ é™¤æ“ä½œ
     vec1.pop_back();
     vec1.erase(vec1.begin() + 2);
     // delete the first 3 elements
-    // É¾³ıÇ°3¸öÔªËØ
+    // åˆ é™¤å‰3ä¸ªå…ƒç´ 
     vec1.erase(vec1.begin(), vec1.begin() + 3);
 
     cout << "after erase: ";
@@ -72,9 +72,9 @@ int main()
     cout << endl;
 
 // 6. resize operation
-// 6. µ÷Õû´óĞ¡
+// 6. è°ƒæ•´å¤§å°
     // resize to 10 elements, new elements are filled with 999
-    // µ÷Õûµ½10¸öÔªËØ£¬ĞÂÔªËØÓÃ999Ìî³ä
+    // è°ƒæ•´åˆ°10ä¸ªå…ƒç´ ï¼Œæ–°å…ƒç´ ç”¨999å¡«å……
     vec1.resize(10, 999);
     cout << "after resize: ";
     for (const auto &elem : vec1)
@@ -82,7 +82,7 @@ int main()
     cout << endl;
 
 // 7. clear and swap
-// 7. Çå¿ÕºÍ½»»»
+// 7. æ¸…ç©ºå’Œäº¤æ¢
     vector<int> temp = {100, 200, 300};
     vec1.swap(temp);
     cout << "after swap: ";

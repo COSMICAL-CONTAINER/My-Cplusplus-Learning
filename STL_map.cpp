@@ -3,78 +3,83 @@
 #include "Person.hpp"
 using namespace std;
 
-// map is a container that stores key-value pairs, where each key is unique and maps to a value. 
+// map is a container that stores key-value pairs, where each key is unique and maps to a value.
 // It is implemented as a balanced binary search tree (usually a red-black tree), which allows for efficient insertion, deletion, and lookup operations.
-// The keys in a map are ordered according to a comparison function (by default, std::less), 
+// The keys in a map are ordered according to a comparison function (by default, std::less),
 // which means that the elements in the map are stored in sorted order based on their keys.
-// map ÊÇÒ»¸ö´æ´¢¼üÖµ¶ÔµÄÈİÆ÷,ÆäÖĞÃ¿¸ö¼ü¶¼ÊÇÎ¨Ò»µÄ,²¢Ó³Éäµ½Ò»¸öÖµ¡£
-// Ëü±»ÊµÏÖÎªÒ»¸öÆ½ºâµÄ¶ş²æËÑË÷Ê÷£¨Í¨³£ÊÇºìºÚÊ÷£©,ÕâÔÊĞí½øĞĞ¸ßĞ§µÄ²åÈë¡¢É¾³ıºÍ²éÕÒ²Ù×÷¡£
-// map ÖĞµÄ¼ü¸ù¾İ±È½Ïº¯Êı£¨Ä¬ÈÏÎª std::less£©½øĞĞÅÅĞò,
-// ÕâÒâÎ¶×Å¸ù¾İ¼üµÄÅÅĞòË³Ğò,map ÖĞµÄÔªËØ±»´æ´¢¡£
+// map æ˜¯ä¸€ä¸ªå­˜å‚¨é”®å€¼å¯¹çš„å®¹å™¨,å…¶ä¸­æ¯ä¸ªé”®éƒ½æ˜¯å”¯ä¸€çš„,å¹¶æ˜ å°„åˆ°ä¸€ä¸ªå€¼ã€‚
+// å®ƒè¢«å®ç°ä¸ºä¸€ä¸ªå¹³è¡¡çš„äºŒå‰æœç´¢æ ‘ï¼ˆé€šå¸¸æ˜¯çº¢é»‘æ ‘ï¼‰,è¿™å…è®¸è¿›è¡Œé«˜æ•ˆçš„æ’å…¥ã€åˆ é™¤å’ŒæŸ¥æ‰¾æ“ä½œã€‚
+// map ä¸­çš„é”®æ ¹æ®æ¯”è¾ƒå‡½æ•°ï¼ˆé»˜è®¤ä¸º std::lessï¼‰è¿›è¡Œæ’åº,
+// è¿™æ„å‘³ç€æ ¹æ®é”®çš„æ’åºé¡ºåº,map ä¸­çš„å…ƒç´ è¢«å­˜å‚¨ã€‚
 
-int main() 
+int main()
 {
     cout << "=== Map Demo ===" << endl;
-    cout << "=== Map ÏêÏ¸Ê¾Àı ===" << endl;
+    cout << "=== Map è¯¦ç»†ç¤ºä¾‹ ===" << endl;
 
 // 1. create and initialize
-// 1. ´´½¨ºÍ³õÊ¼»¯
+// 1. åˆ›å»ºå’Œåˆå§‹åŒ–
     map<string, int> m1 = {{"apple", 1}, {"banana", 2}, {"orange", 3}};
     map<string, int> m2;
 
 // 2. insert operation
-// 2. ²åÈë²Ù×÷
+// 2. æ’å…¥æ“ä½œ
     m2["apple"] = 1;
     m2.insert({"banana", 2});
     m2.insert(make_pair("orange", 3));
     m2.emplace("grape", 4);
 
 // 3. access and search
-// 3. ·ÃÎÊºÍ²éÕÒ
-    cout << "appleµÄÖµ: " << m2["apple"] << endl;
-    cout << "bananaµÄÖµ: " << m2.at("banana") << endl;
-    
+// 3. è®¿é—®å’ŒæŸ¥æ‰¾
+    cout << "apple's value: " << m2["apple"] << endl;
+    cout << "banana's value: " << m2.at("banana") << endl;
+
     auto it = m2.find("orange");
-    if (it != m2.end()) {
-        cout << "ÕÒµ½orange: " << it->second << endl;
+    if (it != m2.end())
+    {
+        cout << "found orange: " << it->second << endl;
     }
 
 // 4. bound operation
-// 4. ±ß½ç²éÕÒ
+// 4. è¾¹ç•ŒæŸ¥æ‰¾
     auto lower = m2.lower_bound("b");
     auto upper = m2.upper_bound("o");
-    cout << "bµ½oµÄ·¶Î§: ";
-    for (auto it = lower; it != upper; ++it) {
+    cout << "range from b to o: ";
+    for (auto it = lower; it != upper; ++it)
+    {
         cout << it->first << ":" << it->second << " ";
     }
     cout << endl;
 
 // 5. forward traversal
-// 5. ±éÀú
+// 5. éå†
     cout << "map: ";
-    for (const auto& pair : m2) {
+    for (const auto &pair : m2)
+    {
         cout << pair.first << ":" << pair.second << " ";
     }
     cout << endl;
 
 // 6. delete operation
-// 6. É¾³ı²Ù×÷
+// 6. åˆ é™¤æ“ä½œ
     m2.erase("banana");
     cout << "after delete banana: ";
-    for (const auto& pair : m2) {
+    for (const auto &pair : m2)
+    {
         cout << pair.first << ":" << pair.second << " ";
     }
     cout << endl;
 
 // 7. clear the map
-// 7. ×Ô¶¨Òå±È½Ïº¯Êı
+// 7. è‡ªå®šä¹‰æ¯”è¾ƒå‡½æ•°
     map<Person, int, greater<Person>> personMap;
     personMap[Person("Alice", 25)] = 1;
     personMap[Person("Bob", 30)] = 2;
     personMap[Person("Charlie", 20)] = 3;
-    
+
     cout << "sort by age: ";
-    for (const auto& pair : personMap) {
+    for (const auto &pair : personMap)
+    {
         cout << pair.first << ":" << pair.second << " ";
     }
     cout << endl;

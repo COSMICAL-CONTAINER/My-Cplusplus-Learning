@@ -4,34 +4,34 @@ using namespace std;
 
 // C++ list is a standard template library (STL) container that implements a doubly linked list.
 // It supports efficient insertion and deletion operations (O(1) time complexity) but does not support random access.
-// C++ list ÊÇ±ê×¼Ä£°å¿â(STL)ÖĞµÄË«ÏòÁ´±íÈİÆ÷, ?Ö§³Ö¸ßĞ§²åÈëºÍÉ¾³ı²Ù×÷(Ê±¼ä¸´ÔÓ¶È O(1)),
-// µ«²»Ö§³ÖËæ»ú·ÃÎÊ, ÊÊÓÃÓÚÆµ·±ĞŞ¸ÄÊı¾İµÄ³¡¾°¡£?
+// C++ list æ˜¯æ ‡å‡†æ¨¡æ¿åº“(STL)ä¸­çš„åŒå‘é“¾è¡¨å®¹å™¨, ?æ”¯æŒé«˜æ•ˆæ’å…¥å’Œåˆ é™¤æ“ä½œ(æ—¶é—´å¤æ‚åº¦ O(1)),
+// ä½†ä¸æ”¯æŒéšæœºè®¿é—®, é€‚ç”¨äºé¢‘ç¹ä¿®æ”¹æ•°æ®çš„åœºæ™¯ã€‚?
 
 int main()
 {
     cout << "=== List Demo ===" << endl;
-    cout << "=== List ÏêÏ¸Ê¾Àı ===" << endl;
+    cout << "=== List è¯¦ç»†ç¤ºä¾‹ ===" << endl;
     
     list<int> lst = {1, 2, 3, 4, 5};
     
 // 1. base operation
-// 1. »ù±¾²Ù×÷
+// 1. åŸºæœ¬æ“ä½œ
     cout << "list size: " << lst.size() << endl;
     cout << "is list empty: " << (lst.empty() ? "yes" : "no") << endl;
 
 // 2. insertion operation
-// 2. ²åÈë²Ù×÷
+// 2. æ’å…¥æ“ä½œ
     lst.push_front(0);
     lst.push_back(6);
     
     auto it = lst.begin();
     // advance 3 position
-    // Ç°½ø3¸öÎ»ÖÃ
+    // å‰è¿›3ä¸ªä½ç½®
     advance(it, 3);
     lst.insert(it, 100);
 
     // insert 3 elements at the current position
-    // ÔÚµ±Ç°Î»ÖÃ²åÈë3¸ö999
+    // åœ¨å½“å‰ä½ç½®æ’å…¥3ä¸ª999
     lst.insert(it, 3, 999);
     lst.insert(it, 1);
     lst.insert(it, 2);
@@ -42,11 +42,11 @@ int main()
     cout << endl;
 
 // 3. delete operation
-// 3. É¾³ı²Ù×÷
+// 3. åˆ é™¤æ“ä½œ
     lst.pop_front();
     lst.pop_back();
     // romove all elements equal to 999
-    // É¾³ıËùÓĞ999
+    // åˆ é™¤æ‰€æœ‰999
     lst.remove(999);
     
     cout << "after deleted: ";
@@ -55,7 +55,7 @@ int main()
     cout << endl;
 
 // 4. sort and reverse
-// 4. ÅÅĞòºÍ·´×ª
+// 4. æ’åºå’Œåè½¬
     lst.sort();
     cout << "after sort: ";
     for (const auto& elem : lst)
@@ -69,9 +69,9 @@ int main()
     cout << endl;
 
 // 5. unique
-// 5. È¥ÖØ
+// 5. å»é‡
     // Note: unique() only removes consecutive duplicates and requires the list to be sorted first.
-    // ×¢Òâ: unique() Ö»ÄÜÉ¾³ıÁ¬ĞøµÄÖØ¸´ÔªËØÇÒĞèÏÈÅÅĞò
+    // æ³¨æ„: unique() åªèƒ½åˆ é™¤è¿ç»­çš„é‡å¤å…ƒç´ ä¸”éœ€å…ˆæ’åº
     lst.unique();
     cout << "after unique: ";
     for (const auto& elem : lst)
@@ -79,10 +79,10 @@ int main()
     cout << endl;
 
 // 6. merge
-// 6. ºÏ²¢
+// 6. åˆå¹¶
     list<int> lst2 = {10, 20, 30};
     // lst2 must be sorted
-    // lst2 ±ØĞëÒÑÅÅĞò
+    // lst2 å¿…é¡»å·²æ’åº
     lst.merge(lst2);
     cout << "after merge: ";
     for (const auto& elem : lst)

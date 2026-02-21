@@ -6,6 +6,19 @@
 
 using namespace std;
 
+// 1. Initializer list
+// 2. Range-based for loop
+// 3. nullptr vs NULL
+// 4. Type alias (using vs typedef)
+// 5. Delegating constructors
+// 6. Inheriting constructors
+// 1. 初始化列表
+// 2. 范围 for 循环
+// 3. nullptr 与 NULL 的区别
+// 4. 类型别名（using 与 typedef）
+// 5. 委托构造函数
+// 6. 继承构造函数
+
 // 3. nullptr vs NULL
 // 3. nullptr 与 NULL 的区别
 void f(int)

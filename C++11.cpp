@@ -35,6 +35,7 @@ void initializerListDemo()
     std::cout << std::endl;
     std::cout << "=== Initializer list Demo ===" << std::endl;
     std::cout << "=== 初始化列表 示例 ===" << std::endl;
+    
     int x{42};
     double pi{3.14};
     int arr[] = {1, 2, 3, 4, 5};
@@ -66,6 +67,7 @@ void rangeForDemo()
     std::cout << std::endl;
     std::cout << "=== Range-based for Demo ===" << std::endl;
     std::cout << "=== 范围 for 示例 ===" << std::endl;
+
     std::vector<int> vec = {1, 2, 3, 4, 5};
     std::cout << "range for loop: ";
     for (const auto x : vec)
@@ -110,6 +112,7 @@ void nullptrDemo()
     std::cout << std::endl;
     std::cout << "=== nullptr vs NULL Demo ===" << std::endl;
     std::cout << "=== nullptr 与 NULL ===" << std::endl;
+
     int *ptr1 = nullptr;
     int *ptr2 = NULL;
     if (ptr1 == nullptr)

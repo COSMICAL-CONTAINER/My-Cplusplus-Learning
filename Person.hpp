@@ -2,7 +2,7 @@
 using namespace std;
 
 // Person class, used to store the name and age of a person
-// PersonÀà£¬ÓÃÓÚ´æ´¢ÈËµÄĞÕÃûºÍÄêÁä
+// Personç±»ï¼Œç”¨äºå­˜å‚¨äººçš„å§“åå’Œå¹´é¾„
 struct Person
 {
     string name;
@@ -10,7 +10,7 @@ struct Person
     Person(const string &n, int a) : name(n), age(a) {}
     
     // overload the less than operator
-    // ÖØÔØĞ¡ÓÚÔËËã·û
+    // é‡è½½å°äºè¿ç®—ç¬¦
     bool operator<(const Person &other) const
     {
         return age < other.age;
@@ -20,7 +20,7 @@ struct Person
     }
     
     // overload the output operator
-    // ÖØÔØÊä³öÔËËã·û
+    // é‡è½½è¾“å‡ºè¿ç®—ç¬¦
     friend ostream &operator<<(ostream &os, const Person &p)
     {
         return os << p.name << "(" << p.age << ")";

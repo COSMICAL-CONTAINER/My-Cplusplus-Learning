@@ -1,6 +1,6 @@
 #include <iostream>
 #include <queue>
-#include "Person.hpp"
+#include "person.hpp"
 using namespace std;
 
 // priority_queue is a container that follows the First In First Out (FIFO) principle.

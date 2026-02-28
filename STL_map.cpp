@@ -1,6 +1,6 @@
 #include <iostream>
 #include <map>
-#include "Person.hpp"
+#include "person.hpp"
 using namespace std;
 
 // map is a container that stores key-value pairs, where each key is unique and maps to a value.

@@ -14,7 +14,7 @@ It is organized as small, topic-focused source files so I can practice one conce
 #### C++11
 
 - `C++11.cpp` : general C++11 syntax/features practice
-- `Lambda.cpp` : lambda expressions
+- `lambda.cpp` : lambda expressions
 - `auto_and_decltype.cpp` : type deduction (`auto`, `decltype`)
 - `move_semantics.cpp` : move semantics and rvalue references
 - `thread.cpp` : basic multithreading
@@ -49,16 +49,16 @@ It is organized as small, topic-focused source files so I can practice one conce
 
 #### `std` callable utilities
 
-- `Std_function_bind.cpp` : `std::function` and `std::bind`
+- `std_function_bind.cpp` : `std::function` and `std::bind`
 
 ### Core C++ topics in this repo
 
-- OOP basics: `Class_and_Object.cpp`, `Constructors_Destructors.cpp`, `Polymorphism.cpp`
-- Inheritance: `Inheritance.cpp`, `Inheritance-virtual_Base_Class.cpp`
-- Operator overloading: `Overloaded.cpp`, `Overloaded_Operator_and_Conversation.cpp`
-- Templates: `Template.cpp`, `Template2.cpp`
-- Memory management: `new_delete.cpp`, `c++_memory.cpp`, `c_memory.c`
-- Language fundamentals: `const_Qualifier.cpp`, `inline.cpp`, `namespace.cpp`, `referance.cpp`
+- OOP basics: `class_and_object.cpp`, `constructors_destructors.cpp`, `polymorphism.cpp`
+- Inheritance: `inheritance.cpp`, `inheritance_virtual_base_class.cpp`
+- Operator overloading: `overloaded.cpp`, `overloaded_operator_and_conversation.cpp`
+- Templates: `template.cpp`, `template2.cpp`
+- Memory management: `new_delete.cpp`, `memory_in_C++.cpp`, `memory_in_C.c`
+- Language fundamentals: `const_qualifier.cpp`, `inline.cpp`, `namespace.cpp`, `referance.cpp`
 - Utilities/practice: `random.cpp`, `time.cpp`, `try_catch.cpp`, `stringclass.cpp`
 
 ### How to use this notebook
@@ -71,43 +71,43 @@ It is organized as small, topic-focused source files so I can practice one conce
 ### Build example (Windows + g++)
 
 ```bash
-g++ -std=c++17 .\Lambda.cpp -o .\Lambda.exe
-.\Lambda.exe
+g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
+.\lambda.exe
 ```
 
 ---
 
-Õâ¸ö²Ö¿âÊÇÎÒµÄ¸öÈË **C++ Ñ§Ï°±Ê¼Ç**¡£  
-ÎÒ°ÑÖªÊ¶µã²ğ³ÉÒ»¸ö¸öĞ¡ÎÄ¼ş£¬·½±ã°´Ö÷ÌâÁ·Ï°ºÍ¸´Ï°¡£
+è¿™ä¸ªä»“åº“æ˜¯æˆ‘çš„ä¸ªäºº **C++ å­¦ä¹ ç¬”è®°**ã€‚  
+æˆ‘æŠŠçŸ¥è¯†ç‚¹æ‹†æˆä¸€ä¸ªä¸ªå°æ–‡ä»¶ï¼Œæ–¹ä¾¿æŒ‰ä¸»é¢˜ç»ƒä¹ å’Œå¤ä¹ ã€‚
 
-### ²Ö¿â¶¨Î»
+### ä»“åº“å®šä½
 
-- ´úÂëĞÎÊ½µÄÑ§Ï°±Ê¼Ç
-- ÖØµã·ÅÔÚÓïÑÔÌØĞÔ¡¢STL¡¢`std` ³£ÓÃ¹¤¾ß
-- ÒÔ¡°µ¥ÎÄ¼şĞ¡ÊµÑé¡±ÎªÖ÷£¬¶ø²»ÊÇÒ»¸öÍêÕûÒµÎñÏîÄ¿
+- ä»£ç å½¢å¼çš„å­¦ä¹ ç¬”è®°
+- é‡ç‚¹æ”¾åœ¨è¯­è¨€ç‰¹æ€§ã€STLã€`std` å¸¸ç”¨å·¥å…·
+- ä»¥â€œå•æ–‡ä»¶å°å®éªŒâ€ä¸ºä¸»ï¼Œè€Œä¸æ˜¯ä¸€ä¸ªå®Œæ•´ä¸šåŠ¡é¡¹ç›®
 
-### °´±ê×¼·Ö²ãÑ§Ï°
+### æŒ‰æ ‡å‡†åˆ†å±‚å­¦ä¹ 
 
 #### C++11
 
-- `C++11.cpp`£ºC++11 ×ÛºÏÓï·¨/ÌØĞÔÁ·Ï°
-- `Lambda.cpp`£ºlambda ±í´ïÊ½
-- `auto_and_decltype.cpp`£ºÀàĞÍÍÆµ¼£¨`auto`¡¢`decltype`£©
-- `move_semantics.cpp`£ºÒÆ¶¯ÓïÒåÓëÓÒÖµÒıÓÃ
-- `thread.cpp`£º»ù´¡¶àÏß³Ì
-- `tuple.cpp`£ºtuple Ê¹ÓÃ
+- `C++11.cpp`ï¼šC++11 ç»¼åˆè¯­æ³•/ç‰¹æ€§ç»ƒä¹ 
+- `lambda.cpp`ï¼šlambda è¡¨è¾¾å¼
+- `auto_and_decltype.cpp`ï¼šç±»å‹æ¨å¯¼ï¼ˆ`auto`ã€`decltype`ï¼‰
+- `move_semantics.cpp`ï¼šç§»åŠ¨è¯­ä¹‰ä¸å³å€¼å¼•ç”¨
+- `thread.cpp`ï¼šåŸºç¡€å¤šçº¿ç¨‹
+- `tuple.cpp`ï¼štuple ä½¿ç”¨
 
 #### C++14
 
-- `C++14.cpp`£ºC++14 ÌØĞÔÁ·Ï°
+- `C++14.cpp`ï¼šC++14 ç‰¹æ€§ç»ƒä¹ 
 
 #### C++17
 
-- `C++17.cpp`£ºC++17 ÌØĞÔÁ·Ï°
+- `C++17.cpp`ï¼šC++17 ç‰¹æ€§ç»ƒä¹ 
 
-### STL Óë `std` ×¨Ìâ
+### STL ä¸ `std` ä¸“é¢˜
 
-#### STL ÈİÆ÷
+#### STL å®¹å™¨
 
 - `STL_vector.cpp`
 - `STL_list.cpp`
@@ -117,37 +117,37 @@ g++ -std=c++17 .\Lambda.cpp -o .\Lambda.exe
 - `STL_stack.cpp`
 - `STL_queue.cpp`
 - `STL_priorityQueue.cpp`
-- `STL_useSkill.cpp`£ºÈİÆ÷Ê¹ÓÃÄ£Ê½Óë STL ÊµÓÃ¼¼ÇÉ
+- `STL_useSkill.cpp`ï¼šå®¹å™¨ä½¿ç”¨æ¨¡å¼ä¸ STL å®ç”¨æŠ€å·§
 
-#### STL Ëã·¨Óëµü´úÆ÷
+#### STL ç®—æ³•ä¸è¿­ä»£å™¨
 
 - `STL_algorithm.cpp`
 - `STL_iterator.cpp`
 
-#### `std` ¿Éµ÷ÓÃ¶ÔÏó¹¤¾ß
+#### `std` å¯è°ƒç”¨å¯¹è±¡å·¥å…·
 
-- `Std_function_bind.cpp`£º`std::function` Óë `std::bind`
+- `std_function_bind.cpp`ï¼š`std::function` ä¸ `std::bind`
 
-### ÆäËûºËĞÄÖ÷Ìâ
+### å…¶ä»–æ ¸å¿ƒä¸»é¢˜
 
-- ÃæÏò¶ÔÏó»ù´¡£º`Class_and_Object.cpp`¡¢`Constructors_Destructors.cpp`¡¢`Polymorphism.cpp`
-- ¼Ì³ĞÌåÏµ£º`Inheritance.cpp`¡¢`Inheritance-virtual_Base_Class.cpp`
-- ÔËËã·ûÖØÔØ£º`Overloaded.cpp`¡¢`Overloaded_Operator_and_Conversation.cpp`
-- Ä£°å£º`Template.cpp`¡¢`Template2.cpp`
-- ÄÚ´æ¹ÜÀí£º`new_delete.cpp`¡¢`c++_memory.cpp`¡¢`c_memory.c`
-- ÓïÑÔ»ù´¡£º`const_Qualifier.cpp`¡¢`inline.cpp`¡¢`namespace.cpp`¡¢`referance.cpp`
-- ÊµÓÃÁ·Ï°£º`random.cpp`¡¢`time.cpp`¡¢`try_catch.cpp`¡¢`stringclass.cpp`
+- é¢å‘å¯¹è±¡åŸºç¡€ï¼š`class_and_object.cpp`ã€`constructors_destructors.cpp`ã€`polymorphism.cpp`
+- ç»§æ‰¿ä½“ç³»ï¼š`inheritance.cpp`ã€`inheritance_virtual_base_class.cpp`
+- è¿ç®—ç¬¦é‡è½½ï¼š`overloaded.cpp`ã€`overloaded_operator_and_conversation.cpp`
+- æ¨¡æ¿ï¼š`template.cpp`ã€`template2.cpp`
+- å†…å­˜ç®¡ç†ï¼š`new_delete.cpp`ã€`memory_in_C++.cpp`ã€`memory_in_C.c`
+- è¯­è¨€åŸºç¡€ï¼š`const_qualifier.cpp`ã€`inline.cpp`ã€`namespace.cpp`ã€`referance.cpp`
+- å®ç”¨ç»ƒä¹ ï¼š`random.cpp`ã€`time.cpp`ã€`try_catch.cpp`ã€`stringclass.cpp`
 
-### Ê¹ÓÃ·½Ê½£¨Ñ§Ï°½¨Òé£©
+### ä½¿ç”¨æ–¹å¼ï¼ˆå­¦ä¹ å»ºè®®ï¼‰
 
-1. Ã¿´ÎÑ¡Ò»¸öÖ÷ÌâÎÄ¼ş¡£
-2. µ¥¶À±àÒë¡¢µ¥¶ÀÔËĞĞ¡£
-3. ¶Ô±ÈÏà½üÎÄ¼ş£¨ÀıÈçÓïÑÔÌØĞÔÓë STL ÓÃ·¨£©¡£
-4. ÔÚÔ­ÎÄ¼şÉÏ¼ÌĞø²¹³äÄã×Ô¼ºµÄ×¢ÊÍºÍÊµÑé¡£
+1. æ¯æ¬¡é€‰ä¸€ä¸ªä¸»é¢˜æ–‡ä»¶ã€‚
+2. å•ç‹¬ç¼–è¯‘ã€å•ç‹¬è¿è¡Œã€‚
+3. å¯¹æ¯”ç›¸è¿‘æ–‡ä»¶ï¼ˆä¾‹å¦‚è¯­è¨€ç‰¹æ€§ä¸ STL ç”¨æ³•ï¼‰ã€‚
+4. åœ¨åŸæ–‡ä»¶ä¸Šç»§ç»­è¡¥å……ä½ è‡ªå·±çš„æ³¨é‡Šå’Œå®éªŒã€‚
 
-### ±àÒëÊ¾Àı£¨Windows + g++£©
+### ç¼–è¯‘ç¤ºä¾‹ï¼ˆWindows + g++ï¼‰
 
 ```bash
-g++ -std=c++17 .\Lambda.cpp -o .\Lambda.exe
-.\Lambda.exe
+g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
+.\lambda.exe
 ```

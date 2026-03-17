@@ -65,6 +65,47 @@ It is organized as small, topic-focused source files so I can practice one conce
 - Language fundamentals: `const_qualifier.cpp`, `inline.cpp`, `namespace.cpp`, `referance.cpp`
 - Utilities/practice: `random.cpp`, `time.cpp`, `try_catch.cpp`, `stringclass.cpp`
 
+### Design Patterns roadmap
+
+Status legend: `✅ done & uploaded` · `⬜ planned`
+
+#### Creational patterns
+
+| Pattern | Status | File |
+|---|---|---|
+| Factory Method | ✅ | `designPattern_factoryMethod.cpp` |
+| Abstract Factory | ✅ | `designPattern_abstractFactoryMethod.cpp` |
+| Builder | ✅ | `designPattern_builderMethod.cpp` |
+| Prototype | ✅ | `designPattern_prototypeMethod.cpp` |
+| Singleton | ✅ | `designPattern_SingletonMethod.cpp` |
+
+#### Structural patterns
+
+| Pattern | Status | File |
+|---|---|---|
+| Adapter | ✅ | `designPattern_adapterMethod.cpp` |
+| Bridge | ✅ | `designPattern_bridgeMethod.cpp` |
+| Composite | ✅ | `designPattern_compositeMethod.cpp` |
+| Decorator | ⬜ | - |
+| Facade | ⬜ | - |
+| Flyweight | ⬜ | - |
+| Proxy | ⬜ | - |
+
+#### Behavioral patterns
+
+| Pattern | Status | File |
+|---|---|---|
+| Chain of Responsibility | ⬜ | - |
+| Command | ⬜ | - |
+| Iterator | ⬜ | - |
+| Mediator | ⬜ | - |
+| Memento | ⬜ | - |
+| Observer | ⬜ | - |
+| State | ⬜ | - |
+| Strategy | ⬜ | - |
+| Template Method | ⬜ | - |
+| Visitor | ⬜ | - |
+
 ### How to use this notebook
 
 1. Pick one topic/file.
@@ -145,6 +186,47 @@ g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
 - 内存管理：`new_delete.cpp`、`memory_in_C++.cpp`、`memory_in_C.c`
 - 语言基础：`const_qualifier.cpp`、`inline.cpp`、`namespace.cpp`、`referance.cpp`
 - 实用练习：`random.cpp`、`time.cpp`、`try_catch.cpp`、`stringclass.cpp`
+
+### 设计模式目录
+
+状态说明：`✅ 已完成并上传` · `⬜ 计划中`
+
+#### 创建型模式
+
+| 模式 | 状态 | 文件 |
+|---|---|---|
+| 工厂方法（Factory Method） | ✅ | `designPattern_factoryMethod.cpp` |
+| 抽象工厂（Abstract Factory） | ✅ | `designPattern_abstractFactoryMethod.cpp` |
+| 生成器（Builder） | ✅ | `designPattern_builderMethod.cpp` |
+| 原型（Prototype） | ✅ | `designPattern_prototypeMethod.cpp` |
+| 单例（Singleton） | ✅ | `designPattern_SingletonMethod.cpp` |
+
+#### 结构型模式
+
+| 模式 | 状态 | 文件 |
+|---|---|---|
+| 适配器（Adapter） | ✅ | `designPattern_adapterMethod.cpp` |
+| 桥接（Bridge） | ✅ | `designPattern_bridgeMethod.cpp` |
+| 组合（Composite） | ✅ | `designPattern_compositeMethod.cpp` |
+| 装饰（Decorator） | ⬜ | - |
+| 外观（Facade） | ⬜ | - |
+| 享元（Flyweight） | ⬜ | - |
+| 代理（Proxy） | ⬜ | - |
+
+#### 行为型模式
+
+| 模式 | 状态 | 文件 |
+|---|---|---|
+| 责任链（Chain of Responsibility） | ⬜ | - |
+| 命令（Command） | ⬜ | - |
+| 迭代器（Iterator） | ⬜ | - |
+| 中介者（Mediator） | ⬜ | - |
+| 备忘录（Memento） | ⬜ | - |
+| 观察者（Observer） | ⬜ | - |
+| 状态（State） | ⬜ | - |
+| 策略（Strategy） | ⬜ | - |
+| 模板方法（Template Method） | ⬜ | - |
+| 访问者（Visitor） | ⬜ | - |
 
 ### 使用方式（学习建议）
 

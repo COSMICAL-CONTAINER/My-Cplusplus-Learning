@@ -86,7 +86,7 @@ Status legend: `✅ done & uploaded` · `⬜ planned`
 | Adapter | ✅ | `designPattern_adapterMethod.cpp` |
 | Bridge | ✅ | `designPattern_bridgeMethod.cpp` |
 | Composite | ✅ | `designPattern_compositeMethod.cpp` |
-| Decorator | ⬜ | - |
+| Decorator | ✅ | `designPattern_decoratorMethod.cpp` |
 | Facade | ⬜ | - |
 | Flyweight | ⬜ | - |
 | Proxy | ⬜ | - |
@@ -208,7 +208,7 @@ g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
 | 适配器（Adapter） | ✅ | `designPattern_adapterMethod.cpp` |
 | 桥接（Bridge） | ✅ | `designPattern_bridgeMethod.cpp` |
 | 组合（Composite） | ✅ | `designPattern_compositeMethod.cpp` |
-| 装饰（Decorator） | ⬜ | - |
+| 装饰（Decorator） | ✅ | `designPattern_decoratorMethod.cpp` |
 | 外观（Facade） | ⬜ | - |
 | 享元（Flyweight） | ⬜ | - |
 | 代理（Proxy） | ⬜ | - |

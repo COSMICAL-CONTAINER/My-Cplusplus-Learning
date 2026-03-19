@@ -123,6 +123,7 @@ int main()
 
 #if __cplusplus >= 201102L
     std::cout << "Compiler mode is C++11 or later.\n";
+    std::cout << "---------------------\n";
 
 // (1) emplace_back base use
 // (1) emplace_back 基本用法
@@ -131,12 +132,14 @@ int main()
     // 预留空间，排除扩容干扰
     vec.reserve(10);
 
+    std::cout << "push_back demo:\n";
     // push_back path: constructs a temporary Widget, then moves it into the vector
     // output: construct → move construct
     // push_back的路径：先在栈上构造临时Widget，再移动到容器末尾
     // 输出：构造 → 移动构造
     vec.push_back(MyObject(1, 3.14));
 
+    std::cout << "emplace_back demo:\n";
     // emplace_back path: constructs the Widget directly in place at the end of the vector's memory, no temporary object is created
     // output: construct
     // emplace_back的路径：直接在容器末尾的内存上调用Widget(1, 3.14)，没有临时对象
@@ -144,6 +147,7 @@ int main()
     vec.emplace_back(1, 3.14);
     std::vector<FileHandle> handles;
 
+    std::cout << "---------------------\n";
 // (2) notice: emplace_back will bypass explicit, the compiler will no longer help you check
 // (2) 注意: emplace_back会绕过explicit，编译器不再帮你把关
     // error: no implicit conversion from int to FileHandle, push_back requires an object of type FileHandle or something that can be implicitly converted to it, but 42 is just an int, so this will cause a compilation error.
@@ -160,10 +164,10 @@ int main()
 
 // (3) naked pointer + emplace_back = memory leak time bomb
 // (3) 裸指针 + emplace_back = 内存泄漏定时炸弹
-    // std::vector<std::shared_ptr<object>> vec;
+    std::vector<std::shared_ptr<MyObject>> ptrVec;
 
     // 写法A：安全
-    vec.push_back(std::make_shared<MyObject>());
+    ptrVec.push_back(std::make_shared<MyObject>(1, 3.14));
 
     // 写法B：有泄漏风险
     // 原因：参数会先求值，new MyObject() 先返回裸指针；
@@ -185,11 +189,13 @@ int main()
 
     // we also can use emplace_back with initializer list, but we need to explicitly construct an initializer_list object, which is a bit verbose and not very elegant.
     // 也可以用emplace_back接initializer list，但需要显式构造一个
+    std::vector<std::vector<int>> matrix;
+
     // Method 1：explicitly construct an initializer_list
+    // 方法1：显式构造一个initializer_list对象
     matrix.emplace_back(std::initializer_list<int>{1, 2, 3});
 
     // Method 2：construct a temporary vector, then move it into the container, which is less efficient than directly constructing in place, 
-    // but it's more concise than the first method.
     // 方法2：先构造一个临时vector，再移动到容器中，比直接构造在容器中效率低，但比显式构造initializer_list简洁。
     matrix.emplace_back(std::vector<int>{1, 2, 3});
     // but it is stupid, because it becomes push_back, so why not just use push_back?

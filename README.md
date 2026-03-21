@@ -87,8 +87,8 @@ Status legend: `✅ done & uploaded` · `⬜ planned`
 | Bridge | ✅ | `designPattern_bridgeMethod.cpp` |
 | Composite | ✅ | `designPattern_compositeMethod.cpp` |
 | Decorator | ✅ | `designPattern_decoratorMethod.cpp` |
-| Facade | ⬜ | - |
-| Flyweight | ⬜ | - |
+| Facade | ✅ | `designPattern_facadeMethod.cpp` |
+| Flyweight | ✅ | `designPattern_flyweightMethod.cpp` |
 | Proxy | ⬜ | - |
 
 #### Behavioral patterns
@@ -209,8 +209,8 @@ g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
 | 桥接（Bridge） | ✅ | `designPattern_bridgeMethod.cpp` |
 | 组合（Composite） | ✅ | `designPattern_compositeMethod.cpp` |
 | 装饰（Decorator） | ✅ | `designPattern_decoratorMethod.cpp` |
-| 外观（Facade） | ⬜ | - |
-| 享元（Flyweight） | ⬜ | - |
+| 外观（Facade） | ✅ | `designPattern_facadeMethod.cpp` |
+| 享元（Flyweight） | ✅ | `designPattern_flyweightMethod.cpp` |
 | 代理（Proxy） | ⬜ | - |
 
 #### 行为型模式

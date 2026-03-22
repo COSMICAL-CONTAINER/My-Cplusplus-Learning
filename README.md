@@ -89,7 +89,7 @@ Status legend: `✅ done & uploaded` · `⬜ planned`
 | Decorator | ✅ | `designPattern_decoratorMethod.cpp` |
 | Facade | ✅ | `designPattern_facadeMethod.cpp` |
 | Flyweight | ✅ | `designPattern_flyweightMethod.cpp` |
-| Proxy | ⬜ | - |
+| Proxy | ✅ | `designPattern_proxyMethod.cpp` |
 
 #### Behavioral patterns
 
@@ -211,7 +211,7 @@ g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
 | 装饰（Decorator） | ✅ | `designPattern_decoratorMethod.cpp` |
 | 外观（Facade） | ✅ | `designPattern_facadeMethod.cpp` |
 | 享元（Flyweight） | ✅ | `designPattern_flyweightMethod.cpp` |
-| 代理（Proxy） | ⬜ | - |
+| 代理（Proxy） | ✅ | `designPattern_proxyMethod.cpp` |
 
 #### 行为型模式
 

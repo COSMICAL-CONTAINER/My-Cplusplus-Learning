@@ -95,7 +95,7 @@ Status legend: `✅ done & uploaded` · `⬜ planned`
 
 | Pattern | Status | File |
 |---|---|---|
-| Chain of Responsibility | ⬜ | - |
+| Chain of Responsibility | ✅ | `designPattern_chainOfResponsibilityMethod.cpp` |
 | Command | ⬜ | - |
 | Iterator | ⬜ | - |
 | Mediator | ⬜ | - |
@@ -217,7 +217,7 @@ g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
 
 | 模式 | 状态 | 文件 |
 |---|---|---|
-| 责任链（Chain of Responsibility） | ⬜ | - |
+| 责任链（Chain of Responsibility） | ✅ | `designPattern_chainOfResponsibilityMethod.cpp` |
 | 命令（Command） | ⬜ | - |
 | 迭代器（Iterator） | ⬜ | - |
 | 中介者（Mediator） | ⬜ | - |

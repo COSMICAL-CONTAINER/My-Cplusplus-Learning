@@ -100,7 +100,7 @@ Status legend: `✅ done & uploaded` · `⬜ planned`
 | Iterator | ✅ | `designPattern_iteratorMethod.cpp` |
 | Mediator | ✅ | `designPattern_MediatorMethod.cpp` |
 | Memento | ✅ | `designPattern_MementoMethod.cpp` |
-| Observer | ⬜ | - |
+| Observer | ✅ | `designPattern_observerMethod.cpp` |
 | State | ⬜ | - |
 | Strategy | ⬜ | - |
 | Template Method | ⬜ | - |
@@ -222,7 +222,7 @@ g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
 | 迭代器（Iterator） | ✅ | `designPattern_iteratorMethod.cpp` |
 | 中介者（Mediator） | ✅ | `designPattern_MediatorMethod.cpp` |
 | 备忘录（Memento） | ✅ | `designPattern_MementoMethod.cpp` |
-| 观察者（Observer） | ⬜ | - |
+| 观察者（Observer） | ✅ | `designPattern_observerMethod.cpp` |
 | 状态（State） | ⬜ | - |
 | 策略（Strategy） | ⬜ | - |
 | 模板方法（Template Method） | ⬜ | - |

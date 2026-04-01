@@ -102,7 +102,7 @@ Status legend: `✅ done & uploaded` · `⬜ planned`
 | Memento | ✅ | `designPattern_MementoMethod.cpp` |
 | Observer | ✅ | `designPattern_observerMethod.cpp` |
 | State | ✅ | `designPattern_stateMethod.cpp` |
-| Strategy | ⬜ | - |
+| Strategy | ✅ | `designPattern_strategyMethod.cpp` |
 | Template Method | ⬜ | - |
 | Visitor | ⬜ | - |
 
@@ -224,7 +224,7 @@ g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
 | 备忘录（Memento） | ✅ | `designPattern_MementoMethod.cpp` |
 | 观察者（Observer） | ✅ | `designPattern_observerMethod.cpp` |
 | 状态（State） | ✅ | `designPattern_stateMethod.cpp` |
-| 策略（Strategy） | ⬜ | - |
+| 策略（Strategy） | ✅ | `designPattern_strategyMethod.cpp` |
 | 模板方法（Template Method） | ⬜ | - |
 | 访问者（Visitor） | ⬜ | - |
 

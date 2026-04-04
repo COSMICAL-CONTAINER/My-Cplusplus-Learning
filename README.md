@@ -103,7 +103,7 @@ Status legend: `✅ done & uploaded` · `⬜ planned`
 | Observer | ✅ | `designPattern_observerMethod.cpp` |
 | State | ✅ | `designPattern_stateMethod.cpp` |
 | Strategy | ✅ | `designPattern_strategyMethod.cpp` |
-| Template Method | ⬜ | - |
+| Template Method | ✅ | `designPattern_templateMethod.cpp` |
 | Visitor | ⬜ | - |
 
 ### How to use this notebook
@@ -225,7 +225,7 @@ g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
 | 观察者（Observer） | ✅ | `designPattern_observerMethod.cpp` |
 | 状态（State） | ✅ | `designPattern_stateMethod.cpp` |
 | 策略（Strategy） | ✅ | `designPattern_strategyMethod.cpp` |
-| 模板方法（Template Method） | ⬜ | - |
+| 模板方法（Template Method） | ✅ | `designPattern_templateMethod.cpp` |
 | 访问者（Visitor） | ⬜ | - |
 
 ### 使用方式（学习建议）

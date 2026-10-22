@@ -246,6 +246,7 @@ bool Complex::operator!=(const Complex &complexObj)
 Complex &Complex::operator++()
 {
     real++;
+    ima++;
     return (*this);
 }
 
@@ -253,6 +254,7 @@ Complex Complex::operator++(int)
 {
     Complex temp = *this;
     real++;
+    ima++;
     return temp;
 }
 

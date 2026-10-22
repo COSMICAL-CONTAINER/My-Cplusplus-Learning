@@ -58,8 +58,8 @@ void demoBinarySemaphore()
 
 // ============================================================
 // Demo 2: Counting Semaphore (计数信号量)
-// Scenario: 10 threads compete for 3 slots.
-// 场景：10个线程争抢3个位置（许可证）。
+// Scenario: 6 threads compete for 3 slots.
+// 场景：6个线程争抢3个位置（许可证）。
 // ============================================================
 void demoCountingSemaphore()
 {

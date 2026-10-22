@@ -54,7 +54,7 @@ int main()
 
 // 4. function return type deduction
 // 4. 函数返回类型推导
-    auto add = [](int a, int b) -> int
+    auto add = [](int a, int b)
     { return a + b; };
     cout << "add(3, 4) = " << add(3, 4) << endl;
 

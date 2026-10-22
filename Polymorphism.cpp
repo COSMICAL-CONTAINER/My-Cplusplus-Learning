@@ -93,7 +93,7 @@ private:
 class Square : public Point
 {
 public:
-    Square(double x, double y, double z, string square_name) : x(x), y(y),square_name(square_name){};
+    Square(double x, double y, double z, string square_name) : x(x), y(y), height(z), square_name(square_name){};
     ~Square(){};
     const Square* getme() const{cout << "get Square" << endl; return this;};
     const void showType()const{cout << "Type Square" << endl;};

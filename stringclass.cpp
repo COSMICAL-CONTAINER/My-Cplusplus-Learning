@@ -65,7 +65,10 @@ int main()
 
     // Compare
     // 比较
-    if(string1 < string2)
+    if (string1 < string2)
+    {
+        cout << string1 << " < " << string2 << endl;
+    }
 
     // Input and output
     // 输入输出

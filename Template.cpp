@@ -36,13 +36,13 @@ template <typename T> void fun2(const T rhs)
 
 template <typename T> void fun3(T& rhs)
 {
-    rhs = 4;
+    // rhs = 4;   // error when T is const int: assignment of read-only reference
     cout << rhs * 2 << endl;
 }
 
 template <typename T> void fun4(const T& rhs)
 {
-    rhs = 4;
+    // rhs = 4;   // error: assignment of read-only reference
     cout << rhs * 2 << endl;
 }
 
@@ -130,10 +130,10 @@ int main()
     fun5(&x2);   // int
     fun5(&x3);   // int
 
-    int x[3] = {3};
-    fun6(x);     //int *
+    int arr[3] = {3};
+    fun6(arr);   //int *
 
-    fun7(x);     //int [3]
+    fun7(arr);   //int [3]
 
     fun8(doubleX);//int(*)(int)
     return 0;

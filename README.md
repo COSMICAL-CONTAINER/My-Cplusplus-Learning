@@ -71,13 +71,13 @@ Status legend: `✅ done & uploaded` · `⬜ planned`
 
 #### Creational patterns
 
-| Pattern | Status | File |
-|---|---|---|
-| Factory Method | ✅ | `designPattern_factoryMethod.cpp` |
-| Abstract Factory | ✅ | `designPattern_abstractFactoryMethod.cpp` |
-| Builder | ✅ | `designPattern_builderMethod.cpp` |
-| Prototype | ✅ | `designPattern_prototypeMethod.cpp` |
-| Singleton | ✅ | `designPattern_SingletonMethod.cpp` |
+| Pattern          | Status | File                                      |
+| ---------------- | ------ | ----------------------------------------- |
+| Factory Method   | ✅      | `designPattern_factoryMethod.cpp`         |
+| Abstract Factory | ✅      | `designPattern_abstractFactoryMethod.cpp` |
+| Builder          | ✅      | `designPattern_builderMethod.cpp`         |
+| Prototype        | ✅      | `designPattern_prototypeMethod.cpp`       |
+| Singleton        | ✅      | `designPattern_SingletonMethod.cpp`       |
 
 #### Structural patterns
 

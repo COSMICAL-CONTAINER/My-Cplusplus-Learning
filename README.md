@@ -32,6 +32,10 @@ It is organized as small, topic-focused source files so I can practice one conce
 
 - `C++20.cpp` : C++20 feature practice
 
+#### C++23
+
+- `C++23.cpp` : C++23 feature practice (compile with `-std=c++23`)
+
 ### STL and `std` focused notes
 
 #### STL containers
@@ -50,17 +54,22 @@ It is organized as small, topic-focused source files so I can practice one conce
 
 - `STL_algorithm.cpp`
 - `STL_iterator.cpp`
+- `STL_ranges.cpp` : ranges pipeline (filter/transform) and lazy evaluation
 
 #### `std` callable utilities
 
 - `std_function_bind.cpp` : `std::function` and `std::bind`
+
+#### Non-owning views
+
+- `std_span_string_view.cpp` : `std::span` and `std::string_view`
 
 ### Core C++ topics in this repo
 
 - OOP basics: `class_and_object.cpp`, `constructors_destructors.cpp`, `polymorphism.cpp`
 - Inheritance: `inheritance.cpp`, `inheritance_virtual_base_class.cpp`
 - Operator overloading: `overloaded.cpp`, `overloaded_operator_and_conversation.cpp`
-- Templates: `template.cpp`, `template2.cpp`
+- Templates: `template.cpp`, `template2.cpp`, `STL_concepts_typeTraits.cpp`
 - Memory management: `new_delete.cpp`, `memory_in_C++.cpp`, `memory_in_C.c`
 - Language fundamentals: `const_qualifier.cpp`, `inline.cpp`, `namespace.cpp`, `referance.cpp`
 - Utilities/practice: `random.cpp`, `time.cpp`, `try_catch.cpp`, `stringclass.cpp`
@@ -154,6 +163,10 @@ g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
 
 - `C++20.cpp`：C++20 特性练习
 
+#### C++23
+
+- `C++23.cpp`：C++23 特性练习（需 `-std=c++23` 编译）
+
 ### STL 与 `std` 专题
 
 #### STL 容器
@@ -172,17 +185,22 @@ g++ -std=c++17 .\lambda.cpp -o .\lambda.exe
 
 - `STL_algorithm.cpp`
 - `STL_iterator.cpp`
+- `STL_ranges.cpp`：ranges 管道（filter/transform）与惰性求值
 
 #### `std` 可调用对象工具
 
 - `std_function_bind.cpp`：`std::function` 与 `std::bind`
+
+#### 非拥有视图
+
+- `std_span_string_view.cpp`：`std::span` 与 `std::string_view`
 
 ### 其他核心主题
 
 - 面向对象基础：`class_and_object.cpp`、`constructors_destructors.cpp`、`polymorphism.cpp`
 - 继承体系：`inheritance.cpp`、`inheritance_virtual_base_class.cpp`
 - 运算符重载：`overloaded.cpp`、`overloaded_operator_and_conversation.cpp`
-- 模板：`template.cpp`、`template2.cpp`
+- 模板：`template.cpp`、`template2.cpp`、`STL_concepts_typeTraits.cpp`
 - 内存管理：`new_delete.cpp`、`memory_in_C++.cpp`、`memory_in_C.c`
 - 语言基础：`const_qualifier.cpp`、`inline.cpp`、`namespace.cpp`、`referance.cpp`
 - 实用练习：`random.cpp`、`time.cpp`、`try_catch.cpp`、`stringclass.cpp`
